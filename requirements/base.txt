@@ -11,4 +11,5 @@ Pillow==4.1.1
 django-nested-admin==3.0.17
 django-cors-headers==2.0.2
 whitenoise==3.3.0
+django-allauth==0.32.0
 faker==0.7.17
