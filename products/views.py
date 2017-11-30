@@ -5,7 +5,7 @@ from .models import Categorie, Item
 # Create your views here.
 
 
-def home_view(self, request):
+def home_view(request):
     categories = Categorie.objects.all()
     context = {
         'categories': categories
@@ -13,7 +13,7 @@ def home_view(self, request):
     return render(request, 'index.html', context)
 
 
-def categorie_view(self, request):
+def categorie_view(request):
     categories = Categorie.objects.all()
     context = {
         'categories': categories
@@ -21,7 +21,7 @@ def categorie_view(self, request):
     return render(request, 'categories.html', context)
 
 
-def all_items_view(self, request):
+def all_items_view(request):
     items = Item.objects.all()
     context = {
         'items': items
@@ -29,7 +29,7 @@ def all_items_view(self, request):
     return render(request, 'items.html', context)
 
 
-def categorie_detail(self, request):
+def categorie_detail(request):
     categorie = get_object_or_404(Categorie)
     items = Item.objects.filter(categorie=categorie)
     context = {
