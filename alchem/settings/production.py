@@ -3,7 +3,7 @@ from .common import * # noqa
 import dj_database_url
 
 # Database
-DEBUG = False
+DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
