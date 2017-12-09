@@ -6,8 +6,9 @@ from django.db import models
 class Categorie(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    categorie_image = models.ImageField()
+    categorie_image = models.ImageField(blank=True)
     slug = models.SlugField(unique=True)
+    cat_image_url = models.TextField(blank=True)
 
     class Meta:
         verbose_name = "Categorie"
@@ -25,7 +26,8 @@ class Item(models.Model):
     categorie = models.ForeignKey(Categorie, related_name='items')
     description = models.TextField(blank=True)
     price = models.IntegerField()
-    item_image = models.ImageField()
+    item_image = models.ImageField(blank=True)
+    image_url = models.TextField(blank=True)
     is_available = models.BooleanField(default=True)
     is_verified = models.BooleanField(default=True)
 
