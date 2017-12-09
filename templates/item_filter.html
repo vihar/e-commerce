@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for item in items %}
+	<a href="/item/{{item.id}}"><h1>{{ item.name }}</h1></a>
+	<h1>{{ item.name }}</h1>
+	<h1>{{ item.description }}</h1>
+	<h1>{{ item.categorie }}</h1>
+	{% endfor %}
+</body>
+</html>

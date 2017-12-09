@@ -7,10 +7,14 @@ class Categorie(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     categorie_image = models.ImageField()
+    slug = models.SlugField(unique=True)
 
     class Meta:
         verbose_name = "Categorie"
         verbose_name_plural = "Categorie"
+
+    def get_absolute_url(self):
+        return reverse('categorie_item_details', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.name

@@ -5,7 +5,7 @@
 </head>
 <body>
 {% for categorie in categories %}
-<h1>{{ categorie.name }}</h1>
+<a href="categorie/{{ categorie.slug }}"><h1>{{ categorie.name }}</h1></a>
 <h1>{{ categorie.description }}</h1>
 {% endfor %}
 </body>

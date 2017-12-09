@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-
+from django.views.generic import DetailView
 from .models import Categorie, Item
 
 # Create your views here.
@@ -29,8 +29,14 @@ def all_items_view(request):
     return render(request, 'items.html', context)
 
 
-def categorie_detail(request):
-    categorie = get_object_or_404(Categorie)
+class ItemDetail(DetailView):
+    model = Item
+    template_name = "item.html"
+    context_object_name = "item"
+
+
+def categorie_detail(request, slug):
+    categorie = get_object_or_404(Categorie, slug=slug)
     items = Item.objects.filter(categorie=categorie)
     context = {
         'categorie': categorie,
