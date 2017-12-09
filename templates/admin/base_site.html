@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+ 
+{% block title %}{{ title }} | {% trans 'SugarParrot' %}{% endblock %}
+ 
+{% block branding %}
+<style type="text/css">
+  #header
+  {
+	background: #78909C;
+	color: #FFFFFF;
+  }
+  #site-name{
+  color: #FFFFFF;
+  }
+  #branding h1, #branding h1 a:link, #branding h1 a:visited {
+	color: #FFFFFF;
+}
+</style>
+<h1 id="site-name">{% trans 'ViharK Administration' %}</h1>
+
+{% endblock %}
+ 
+{% block nav-global %}{% endblock %}
