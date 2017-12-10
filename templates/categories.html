@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SugarParrot</title>
+	<meta name="Description" content="Sugar Parrot 💠 🌷Customized / Corporate / Return gifts for every occasion 🌷Uniquely curated and handpicked to perfection. 🌷Best you can find for any age group">
+
+</head>
+<body>
+
+{% block content %}
+	{% for categorie in categories %}
+
+	<a href="categorie/{{ categorie.slug }}"><h1>{{ categorie.name }}</h1></a>
+	<h1>{{ categorie.description }}</h1>
+
+	{% endfor %}
+{% endblock %}
+
+</body>
+</html>
+

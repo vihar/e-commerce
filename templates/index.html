@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +9,152 @@
 
 </head>
 <body>
-{% for categorie in categories %}
-<a href="categorie/{{ categorie.slug }}"><h1>{{ categorie.name }}</h1></a>
-<h1>{{ categorie.description }}</h1>
-{% endfor %}
+{% block content %}
+
+
+	<section>
+		<div class="container">
+			<section>
+				<div class="hero-unit" style="height:50vh">
+					<div class="text-vertical-center">
+						<div class="container">
+							<h1 class="hero-unit-primary-text">Main Text</h1>
+							<p class="hero-unit-secondary-text">Secondary Text</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+	</section>
+
+	<section id="events" style="padding-top: 30px;padding-bottom: 30px">
+		<div class="container">
+			<h1 class="text-center white-text" style="font-weight: 200;">Categories</h1>
+			<hr style="width:40%">
+
+			<div class="card-container">
+
+				<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) no-repeat center center; background-size: cover;">
+					<div class="box">
+						<div class="event-vertical-center">
+							<h1 class="event-card-text">Festivals</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) no-repeat center center; background-size: cover; ">
+					<div class="box">
+						<div class="event-vertical-center">
+							<h1 class="event-card-text">Marraige</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388950281032826880/IMG_2041.JPG) no-repeat center center; background-size: cover; ">
+					<div class="box">
+						<div class="event-vertical-center">
+							<h1 class="event-card-text">Festivals</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388950281032826880/IMG_2041.JPG) no-repeat center center; background-size: cover; ">
+					<div class="box">
+						<div class="event-vertical-center">
+							<h1 class="event-card-text">Marraige</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--Container-->
+	</section>
+
+	<section>
+		<h1 class="text-center white-text" style="font-weight: 200;margin-bottom: 40px;">Featured Products</h1>
+		<div class="container">
+			<div class="products">
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img src="https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg">
+					</div>
+					<div class="product-info">
+						<h5>Honey and Jaggery</h5>
+						<h6>₹400.00</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+{% endblock content %}
 </body>
 </html>
 
