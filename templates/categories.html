@@ -9,14 +9,29 @@
 </head>
 <body>
 
-{% block content %}
-	{% for categorie in categories %}
+	{% block content %}
 
-	<a href="categorie/{{ categorie.slug }}"><h1>{{ categorie.name }}</h1></a>
-	<h1>{{ categorie.description }}</h1>
+	<section id="events" style="padding-top: 30px;padding-bottom: 30px">
+		<div class="container">
+			<h1 class="text-center white-text" style="font-weight: 200;">Categories</h1>
+			<hr style="width:40%">
 
-	{% endfor %}
-{% endblock %}
+			<div class="card-container">
+				{% for categorie in categories %}
+				<a href="{{ categorie.slug }}">
+					<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url({{ categorie.cat_image_url  }}) no-repeat center center; background-size: cover;">
+						<div class="box">
+							<div class="event-vertical-center">
+								<h1 class="event-card-text">{{ categorie.name }}</h1>
+							</div>
+						</div>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+		</div><!--Container-->
+	</section>
+	{% endblock %}
 
 </body>
 </html>

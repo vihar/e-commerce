@@ -5,7 +5,7 @@
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -13,10 +13,9 @@
 	<link href="{% static 'css/style.css'%}" rel="stylesheet">
 
 
-	<style type="text/css">
+	{% block style %}
 
-
-</style>
+	{% endblock %}
 </head>
 
 <body>
@@ -24,11 +23,13 @@
 		<img class="center-block" src="https://cdn.discordapp.com/attachments/388950052426743810/388992850433671169/Sugar_Parrot_-_Logo.png" width="250">
 	</div>
 
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="margin-bottom: : 20px;">
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="margin-bottom: : 20px;position: relative;">
 		<div class="container">
+			
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar10">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+
 			<div class="navbar-collapse collapse" id="navbar10">
 				<ul class="navbar-nav nav-fill w-100">
 					<li class="nav-item">
