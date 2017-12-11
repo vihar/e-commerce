@@ -4,27 +4,30 @@
 
 { % block styles % }
 {% block content %}
-	<section>
-		<h1 class="text-center white-text" style="font-weight: 200;margin-bottom: 40px;">Featured Products</h1>
-		<div class="container">
-			<div class="products">
+<section>
+	<h1 class="text-center white-text" style="font-weight: 200;margin-bottom: 40px;">Featured Products</h1>
+	<div class="container">
+		<div class="products">
 				{% for item in items %}
 				
-				<div class="product-card">
-					<a href="/item/{{item.id}}">
-					<div class="product-image">
-						<img src="{{ item.image_url }}">
-					</div>
-					<div class="product-info">
-						<h5>{{ item.name }}</h5>
-						<h6>{{ item.price }}</h6>
-					</div>
-					</a>
+			<div class="product-card">
+			<a href="/item/{{item.id}}">
+				<div class="product-image">
+					<img class="img-fluid" src="{{ item.image_url }}">
 				</div>
-     {% endfor %}
-
+					</a>
+					
+				<div class="product-info">
+					<h5>Honey and Jaggery</h5>
+					<h6>₹400.00</h6>
+				</div>
+				
 			</div>
+		
+			{% endfor %}
+
 		</div>
-	</section>
+	</div>
+</section>
 
 {% endblock %}
