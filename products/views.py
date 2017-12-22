@@ -43,3 +43,22 @@ def categorie_detail(request, slug):
         'items': items
     }
     return render(request, 'item_filter.html', context)
+
+
+def pre_boxes(request):
+    return render(request, 'pre-boxes.html')
+
+
+def about_us(request):
+    return render(request, 'about.html')
+
+
+def faqs(request):
+    return render(request, 'faqs.html')
+
+
+def souvenirs(request):
+    return render(request, 'souvenirs.html')
+
+def curatedbox(request):
+    return render(request, 'curatedbox.html')

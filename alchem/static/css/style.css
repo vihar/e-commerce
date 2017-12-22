@@ -53,7 +53,7 @@ a:hover {
 	margin-right: auto;
 	margin-left: auto;
 }
-
+/*
 .card-container {
 	width: 100%;
 	display: -webkit-flex;
@@ -63,17 +63,17 @@ a:hover {
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap
 }
-
+*/
 .card-primary {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
 	border: 1px solid rgba(0, 0, 0, .09);
 	border-radius: 3px;
 	color: #555;
-	width: 450px;
+	width: 100%;
 	height: 150px;
-	margin: 20px;
 	background: url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) center center no-repeat;
-	background-size: cover
+	background-size: cover;
+	margin-top: 20px;
 }
 
 @media(max-width:768px) {
@@ -82,11 +82,11 @@ a:hover {
 		border: 1px solid rgba(0, 0, 0, .09);
 		border-radius: 3px;
 		color: #555;
-		width: 300px;
+		width: 100%;
 		height: 150px;
-		margin: 20px;
 		background: url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) center center no-repeat;
-		background-size: cover
+		background-size: cover;
+		text-align: center;
 	}
 }
 
@@ -266,18 +266,17 @@ label {
 
 /*Footer*/
 .footer {
-	padding: 50px 0 20px 0;
+	padding: 30px 0 20px 0;
 	background-color: #f7f7f7;
 	color: #2D3E4F;
 }
-.footer .title{text-align: left;color:#2D3E4F;font-size:25px;}
+.footer .title{text-align: center;color:#2D3E4F;font-size:25px;}
 
 
 .footer .social-icon{padding:0px;margin:0px;}
-.footer .social-icon a{display:inline-block;color:#2D3E4F;font-size:25px;padding:5px;}
-.footer .acount-icon a{display:block;color:#2D3E4F;font-size:18px;padding:5px;text-decoration:none;}
+.footer .social-icon a{display:inline-block;color:#2D3E4F;font-size:32px;padding:5px;}
+.footer .acount-icon a{display:block;color:#2D3E4F;font-size:18px;padding:1px;text-decoration:none;}
 .footer .acount-icon .fa{margin-right:25px;}
-
 
 .footer .category a {
 	text-decoration: none;
