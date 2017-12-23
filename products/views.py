@@ -45,10 +45,6 @@ def categorie_detail(request, slug):
     return render(request, 'item_filter.html', context)
 
 
-def pre_boxes(request):
-    return render(request, 'pre-boxes.html')
-
-
 def about_us(request):
     return render(request, 'about.html')
 
@@ -65,9 +61,17 @@ def souvenirs(request):
     return render(request, 'souvenirs.html', context)
 
 
-def curatedbox(request):
+def pre_boxes(request):
     items = Item.objects.all()
     context = {
         'items': items
     }
     return render(request, 'pre-boxes.html', context)
+
+
+def curatedbox(request):
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, 'curatedbox.html', context)

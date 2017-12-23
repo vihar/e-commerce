@@ -5,19 +5,18 @@
 { % block styles % }
 
 {% block content %}
-<section>
+<section style="min-height: 450px;">
 	<div class="container">
 		<div class="row" style="margin-top: 20px;">
 			<div class="col-sm-5">
 				<img class="img-fluid" src="{{ item.image_url }}" height="200">
-				
 			</div>
 			<div class="col-sm-7">
 				<h1 style="font-size: 3rem;font-weight: 200">{{ item.name }}</h1>
 				<p>Rs.{{ item.price }}</p>
 				<h3 style="font-size: 1rem;font-weight: 300">Description</h3>
 				<hr>
-				<p>{{ item.description }}</p>
+				<pre>{{ item.description }}</pre>
 			</div>
 		</div>
 	</div>

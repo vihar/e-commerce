@@ -16,8 +16,8 @@ a{
 	text-decoration: none !important; 
 }
 a:hover {
-    color: #FFFFFF;
-    text-decoration: none !important; 
+	color: #FFFFFF;
+	text-decoration: none !important; 
 }
 .hero-unit{
 	display: table;
@@ -26,6 +26,23 @@ a:hover {
 	min-height: 500px;
 	height: 100vh;
 	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://cdn.discordapp.com/attachments/388950052426743810/388985636285317120/IMG_2730.JPG") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	overflow: hidden;
+
+}
+.hero-2{
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://cdn.discordapp.com/attachments/388950052426743810/394212272152772608/C95A0749.JPG") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	overflow: hidden;
+}
+.hero-3{
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://cdn.discordapp.com/attachments/388950052426743810/394194267406598144/C95A0510.JPG") center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -206,97 +223,6 @@ h6 {
 	font-size: 14px;
 }
 /* Product Layout */
-.product-filter {
-	display: flex;
-	padding: 30px 0;
-}
-.sort {
-	display: flex;
-	align-self: flex-end;
-}
-
-.collection-sort {
-	display: flex;
-	flex-direction: column;
-}
-
-.collection-sort:first-child {
-	padding-right: 20px;
-}
-
-label {
-	color: #666;
-	font-size: 10px;
-	font-weight: 500;
-	line-height: 2em;
-	text-transform: uppercase;
-}
-.products {
-	display: flex;
-	flex-wrap: wrap;
-}
-.product-card {
-	display: flex;
-	flex-direction: column;
-	padding: 1%;
-	flex: 2 24%;
-	background-color: #FFF;
-	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
-}
-@media ( min-width: 746px ) {
-.product-image img {
-	width: 100%;
-	object-position: center;
-}
-}
-@media ( max-width: 746px ) {
-.product-image img {
-	width: 100%;
-
-	object-position: center;
-}
-}
-
-.product-info {
-	margin-top: auto;
-	padding-top: 20px;
-	text-align: center;
-}
-
-@media ( max-width: 920px ) {
-
-	.product-card {
-		flex: 1 21%;
-	}
-
-	.products .product-card:first-child, 
-	.products .product-card:nth-child(2) {
-		flex: 2 46%;
-	}
-
-}
-
-@media ( max-width: 600px ) {
-	.product-card {
-		flex: 1 46%;
-	}
-}
-
-@media ( max-width: 480px ) {
-
-	h1 {
-		margin-bottom: 20px;
-	}
-
-	.product-filter {
-		flex-direction: column;
-	}
-
-	.sort {
-		align-self: flex-start;
-	}
-
-}
 
 /*Footer*/
 .footer {
