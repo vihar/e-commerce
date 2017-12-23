@@ -7,13 +7,17 @@
 
 
 /* navbar Center */
-
+.navbar-custom{
+	background-color: #EEEEEE; 
+	padding-top:10px;
+	padding-bottom: 10px; 
+}
 a{
-	text-decoration: none; 
+	text-decoration: none !important; 
 }
 a:hover {
-    color: #014c8c;
-    text-decoration: underline; 
+    color: #FFFFFF;
+    text-decoration: none !important; 
 }
 .hero-unit{
 	display: table;
@@ -21,7 +25,7 @@ a:hover {
 	width: 100%;
 	min-height: 500px;
 	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("https://cdn.discordapp.com/attachments/388950052426743810/388985636285317120/IMG_2730.JPG") center center;
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://cdn.discordapp.com/attachments/388950052426743810/388985636285317120/IMG_2730.JPG") center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -37,11 +41,16 @@ a:hover {
 	color: #fff;
 }
 .hero-unit-primary-text{
-	text-transform: uppercase;
-	font-size: 85px;
+	text-transform: capitalize;
+	font-size: 45px;
 	font-weight: 700;
 	line-height: 1;
 	color: #FFF;
+}
+@media(max-width: 746px){
+	.hero-unit-primary-text{
+		font-size: 32px;
+	}
 }
 .hero-unit-secondary-text{
 	font-size: 30px;
@@ -126,6 +135,19 @@ a:hover {
 	.event-center-m {
 		margin-top: 60px
 	}
+}
+
+.btn-custom{
+	border: 2px solid #FFF;
+	background-color: transparent; 
+	padding: 10px 40px;
+	color: #FFF;
+	border-radius: 5px;
+
+}
+.btn-custom:hover{
+	background: #fff;
+	color: #000000;
 }
 /*Items CSS*/
 
