@@ -6,9 +6,9 @@ from .models import Categorie, Item
 
 
 def home_view(request):
-    categories = Categorie.objects.all()
+    items = Item.objects.all()[:3]
     context = {
-        'categories': categories
+        'items': items
     }
     return render(request, 'index.html', context)
 
@@ -58,7 +58,16 @@ def faqs(request):
 
 
 def souvenirs(request):
-    return render(request, 'souvenirs.html')
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, 'souvenirs.html', context)
+
 
 def curatedbox(request):
-    return render(request, 'curatedbox.html')
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, 'pre-boxes.html', context)

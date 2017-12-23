@@ -3,19 +3,6 @@
 {% block content %}
 
 <section style="margin-top: 20px;">
-	<!--div class="container">
-		<section>
-			<div class="hero-unit" style="height:50vh">
-				<div class="text-vertical-center">
-					<div class="container">
-						<h1 class="hero-unit-primary-text"></h1>
-						<p class="hero-unit-secondary-text"></p>
-					</div>
-				</div>
-
-			</div>
-		</section>
-	</div-->
 	<div class="container">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -53,9 +40,9 @@
 				<div class="hero-unit" style="height:50vh">
 					<div class="text-vertical-center">
 						<div class="container">
-							<h1 class="hero-unit-primary-text">Souveniers</h1>
+							<h1 class="hero-unit-primary-text">Souvenirs</h1>
 							<p class="hero-unit-secondary-text"></p>
-							<a class="btn-custom" href="">More</a>
+							<a class="btn-custom" href="/souvenirs">More</a>
 						</div>
 					</div>
 				</div>
@@ -67,7 +54,7 @@
 						<div class="container">
 							<h1 class="hero-unit-primary-text">Curated Boxes</h1>
 							<p class="hero-unit-secondary-text"></p>
-							<a class="btn-custom" href="">More</a>
+							<a class="btn-custom" href="/curated-box">More</a>
 						</div>
 					</div>
 				</div>
@@ -79,46 +66,36 @@
 
 <section id="events" style="padding-top: 30px;padding-bottom: 30px">
 	<div class="container">
-		<h1 class="text-center white-text" style="font-weight: 200;">What's your pick?</h1>
+		<h1 class="text-center white-text" style="font-weight: 200;">Featured</h1>
 		<hr style="width:40%">
 
 		<div class="row">
+			{% for item in items %}
 			<div class="col-sm-4">
-				<a href="/precurated-boxes">
-					<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) no-repeat center center; background-size: cover;">
+				<a href="/item/{{item.id}}">
+					<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url({{ item.image_url }}) no-repeat center center; background-size: cover;">
 						<div class="box">
 							<div class="event-vertical-center">
-								<h1 class="event-card-text">Pre-Curated Boxes</h1>
+								<h1 class="event-card-text">{{ item.name }}</h1>
 							</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-sm-4">
-				<a href="/souvenirs">
-					<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388984939141660672/WhatsApp_Image_2017-12-08_at_4.36.38_PM.jpeg) no-repeat center center; background-size: cover; ">
-						<div class="box">
-							<div class="event-vertical-center">
-								<h1 class="event-card-text">Souvenirs</h1>
-							</div>
-						</div>
-					</div>
-				</a>
-
-			</div>
-			<div class="col-sm-4">
-				<a href="/curated-box">
-					<div class="card-primary" style="background: linear-gradient(rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.6) 10%),url(https://cdn.discordapp.com/attachments/388950052426743810/388950281032826880/IMG_2041.JPG) no-repeat center center; background-size: cover; ">
-						<div class="box">
-							<div class="event-vertical-center">
-								<h1 class="event-card-text">Curated Box</h1>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
+			{% endfor %}
 		</div>
 	</div><!--Container-->
+</section>
+
+<section>
+	<div class="container">
+		<h1 class="text-center white-text" style="font-weight: 200;">Our Philosophy</h1>
+		<hr>
+		<p class="text-center" style="font-size: 24px;font-weight: 200;">We're trying to redefine gifting. Today, it has become a monotony, an obligation. It's something that you do because you want to, and not because you have to. 
+
+
+		At Sugar Parrot, we're making every gift an experience, a collection of many good things, packed with what we believe are the most important components : Compassion, and Love.</p>
+	</div>
 </section>
 
 
