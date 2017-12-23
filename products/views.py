@@ -6,7 +6,7 @@ from .models import Categorie, Item
 
 
 def home_view(request):
-    items = Item.objects.all()[:3]
+    items = Item.objects.all()[:6]
     context = {
         'items': items
     }
@@ -51,6 +51,10 @@ def about_us(request):
 
 def faqs(request):
     return render(request, 'faqs.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
 
 
 def souvenirs(request):

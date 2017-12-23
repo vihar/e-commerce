@@ -1,4 +1,37 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% block style %}
+<style type="text/css">
+h1{
+	font-size: 24px;font-weight: 700;
+}
+p{
+	font-size: 22px; font-weight: 300;margin-bottom: 20px;
+}
+</style>
+{% endblock %}
 {% block content %}
+<section style="margin:40px 0px;min-height: 450px ">
+	<div class="container">
+		<h1 class="text-center" style="font-size: 28px;">Frequently Asked Question's</h1>
+		<hr>
+		<h1 style="">1. When will I recieve my order?</h1>
+		<p style="">You will receive your order anywhere in between 10-12 days. If you require a rush order, please enquire via mail or phone prior to your purchase.</p>
+
+		<h1>2. Where do you deliver ? What is the delivery fee?</h1>
+		<p>We deliver to Twin cities (Hyderabad &amp; Secunderabad). Delivery fee for a single gift will be around 100rs, incase of bulk order (50 or more) price may be slightly lower.</p>
+
+		<h1>3. Are gift boxes customizable?</h1>
+		<p>Absolutely ! Please contact us at <a>write2sugarparrot@gmail.com</a> for any special requests, we can work on your requirements.</p>
+
+		<h1>4. Will the gift box I order look exactly like the photo?</h1>
+		<p>Mostly YES! But the colour of baskets, box or any craft material used may vary depending on the availability. If you have your heart set on something, please email us with any requests!</p>
+
+		<h1>5. When am I eligible to receive a refund?</h1>
+		<p>You may receive a refund if there is any defect in the gifting article. Although all our products are verified by the Inspection Team before it goes into your Gift Box.</p>
+
+		<h1>6. Can I include a note with my order?</h1>
+		<p>Of course you can! Let us know your message we will include it in your Gift Box.</p>
+	</div>
+</section>
 {% endblock content %}

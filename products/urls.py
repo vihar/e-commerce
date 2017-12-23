@@ -11,6 +11,8 @@ urlpatterns = [
         views.about_us, name='about'),
     url(r'^faqs/$',
         views.faqs, name='faqs'),
+    url(r'^contact/$',
+        views.contact, name='contact'),
     url(r'^souvenirs/$',
         views.souvenirs, name='souvenirs'),
     url(r'^curated-box/$',
