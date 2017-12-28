@@ -64,7 +64,7 @@ def souvenirs(request):
     }
     return render(request, 'souvenirs.html', context)
 
-
+"""
 def pre_boxes(request):
     items = Item.objects.all()
     context = {
@@ -72,7 +72,7 @@ def pre_boxes(request):
     }
     return render(request, 'pre-boxes.html', context)
 
-
+"""
 def curatedbox(request):
     items = Item.objects.all()
     context = {
